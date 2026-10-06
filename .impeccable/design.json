@@ -1,0 +1,506 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T17:37:14+05:30",
+  "title": "Design System: Gardenwise",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Leaf Green",
+        "canonical": "#2e7d46",
+        "purpose": "The single page-wide accent: primary buttons, checked boxes, active states, links, focus.",
+        "dark": "#5fbe7e",
+        "tonalRamp": [
+          "#001004",
+          "#012d11",
+          "#094d23",
+          "#246e3b",
+          "#4c925e",
+          "#7ab587",
+          "#a8d9b1",
+          "#d2fbda"
+        ]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Deep Leaf",
+        "purpose": "Accent hover fill and the AA-safe green for small text on tints; brightens in dark theme.",
+        "dark": "#7acf95",
+        "tonalRamp": [
+          "#001003",
+          "#022d11",
+          "#114c25",
+          "#2f6d3f",
+          "#5a8e66",
+          "#85b18e",
+          "#b1d6b7",
+          "#daf8df"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Leaf Wash",
+        "purpose": "Accent tint: user chat bubbles, proof tiles, ghost hover, network pill ground.",
+        "dark": "#1b2b20",
+        "tonalRamp": [
+          "#0a0b0b",
+          "#232523",
+          "#3e413e",
+          "#5a5f5c",
+          "#7c827e",
+          "#9fa7a1",
+          "#c4cdc6",
+          "#e7f2ea"
+        ]
+      },
+      "on-primary": {
+        "role": "primary",
+        "displayName": "On Leaf",
+        "purpose": "Text on accent fills; inverts to near-black in dark theme.",
+        "dark": "#0f1410",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Garden Paper",
+        "purpose": "Page background and input fills.",
+        "dark": "#0f1410",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242423",
+          "#3f403f",
+          "#5d5e5c",
+          "#7f807e",
+          "#a4a5a2",
+          "#c9cbc8",
+          "#edefeb"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "purpose": "Card and panel backgrounds.",
+        "dark": "#161c17",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "surface-tint": {
+        "role": "neutral",
+        "displayName": "Soft Moss",
+        "purpose": "Second tonal step: group headers, tab track, footer band, AI bubbles, hover fills.",
+        "dark": "#1d251e",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#232423",
+          "#3f403e",
+          "#5c5e5b",
+          "#7e817d",
+          "#a2a6a0",
+          "#c8ccc5",
+          "#ebf0e8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "purpose": "Primary text and the 1.5px record outlines.",
+        "dark": "#e9f0e7",
+        "tonalRamp": [
+          "#040e06",
+          "#1a281d",
+          "#374439",
+          "#556158",
+          "#79837b",
+          "#9fa7a0",
+          "#c6ccc7",
+          "#ecf0ec"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Moss Gray",
+        "purpose": "Secondary and lede text.",
+        "dark": "#a3b2a5",
+        "tonalRamp": [
+          "#060d07",
+          "#1c271e",
+          "#364439",
+          "#536256",
+          "#768579",
+          "#9ca89e",
+          "#c3cec5",
+          "#e9f1ea"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "purpose": "Default dividers and card edges.",
+        "dark": "#2a342b",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#232423",
+          "#3e403d",
+          "#5c5f5a",
+          "#7e827c",
+          "#a1a69f",
+          "#c7cdc4",
+          "#eaf1e7"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "purpose": "Interactive borders: inputs, checkboxes, ghost borders, scrollbar thumb.",
+        "dark": "#3a473b",
+        "tonalRamp": [
+          "#0a0c0a",
+          "#222521",
+          "#3d413c",
+          "#5a6058",
+          "#7c8379",
+          "#9fa89c",
+          "#c4cec0",
+          "#e8f2e4"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Sage",
+        "purpose": "Placeholder text only.",
+        "dark": "#8e9b90",
+        "tonalRamp": [
+          "#070d08",
+          "#1e2620",
+          "#38433a",
+          "#556257",
+          "#778479",
+          "#9ca89e",
+          "#c3cec5",
+          "#e9f1ea"
+        ]
+      },
+      "stamp-red": {
+        "role": "secondary",
+        "displayName": "Stamp Red",
+        "purpose": "State ink for record and warning: the week stamp, errors, frost-tender chips.",
+        "dark": "#e3705f",
+        "tonalRamp": [
+          "#1e0000",
+          "#4a0401",
+          "#790e07",
+          "#a52a1e",
+          "#cf5142",
+          "#ef806f",
+          "#ffb5a9",
+          "#ffe9e5"
+        ]
+      },
+      "frost-blue": {
+        "role": "secondary",
+        "displayName": "Frost Blue",
+        "purpose": "State ink for cold/offline: offline pill and frost-watch banner.",
+        "dark": "#7fb6d6",
+        "tonalRamp": [
+          "#000d17",
+          "#02273b",
+          "#0e4561",
+          "#276486",
+          "#5087a9",
+          "#7cacc9",
+          "#a9d1ea",
+          "#def2ff"
+        ]
+      },
+      "frost-blue-soft": {
+        "role": "secondary",
+        "displayName": "Frost Wash",
+        "purpose": "Ground for frost/offline surfaces.",
+        "dark": "#16262f",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#232425",
+          "#3d4042",
+          "#5a5e61",
+          "#7c8184",
+          "#9fa6aa",
+          "#c3ccd1",
+          "#e6f0f6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The single hero headline; re-clamped under 760px."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Every section h2."
+      },
+      "title": {
+        "displayName": "Card Title",
+        "purpose": "Card and group headings (0.98-1.2rem)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, ledes (1.05rem) and hero sub (1.13rem); measures capped 44-62ch."
+      },
+      "label": {
+        "displayName": "Data Label",
+        "purpose": "Uppercase mono micro-labels: fields, plan rows, title block, footer heads, status pills."
+      },
+      "data": {
+        "displayName": "Data Value",
+        "purpose": "Mono numerals and dates; title-block hero values clamp(1.25rem, 2.2vw, 1.6rem)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "resting",
+        "value": "0 1px 2px rgba(23, 37, 26, 0.05), 0 10px 30px rgba(23, 37, 26, 0.07)",
+        "purpose": "Cards at rest: forms, task groups, chat panel, crop card hover, active week tab, open mobile nav. Dark theme swaps to black-based rgba(0,0,0,0.4)/rgba(0,0,0,0.35)."
+      },
+      {
+        "name": "floating",
+        "value": "0 2px 4px rgba(23, 37, 26, 0.06), 0 10px 24px rgba(23, 37, 26, 0.12)",
+        "purpose": "Reserved for content overlapping photography - the hero plan card. Dark theme: rgba(0,0,0,0.45)/rgba(0,0,0,0.5)."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px color-mix(in srgb, #2e7d46 22%, transparent)",
+        "purpose": "Input focus: paired with an accent border-color. Global :focus-visible is a 2px solid #2e7d46 outline, 2px offset, 4px radius."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "The only easing (--ease-out): exponential ease-out for all transitions and animations."
+      },
+      {
+        "name": "transition-color",
+        "value": "160ms",
+        "purpose": "Color, background, and border transitions on hover/active."
+      },
+      {
+        "name": "transition-tap",
+        "value": "120ms",
+        "purpose": "Transform transitions; press feedback scales to 0.97 (0.92 on the task checkbox)."
+      },
+      {
+        "name": "entrance-rise",
+        "value": "opacity 0 to 1 + translateY(10px), 0.24-0.4s, stagger 30-45ms per index",
+        "purpose": "The single shared entrance for task rows, crop cards, chat messages, and the hero plan card (0.4s, 150ms delay)."
+      },
+      {
+        "name": "stamp-hit",
+        "value": "0.52s",
+        "purpose": "The authored moment: week stamp overshoots to scale(1.18) with a 3deg to -4deg swing and a stamp-red ring bloom, settling at rotate(-1.5deg) when coordinates resolve."
+      },
+      {
+        "name": "row-ink",
+        "value": "0.4s, 60ms stagger",
+        "purpose": "Plan-card rows and note ink in after the stamp lands."
+      },
+      {
+        "name": "progress-fill",
+        "value": "220ms linear scaleX",
+        "purpose": "Model download progress bar."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms !important on all animations/transitions; scroll-behavior auto",
+        "purpose": "Global prefers-reduced-motion override."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "960px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action on a view: Get my plan, Use my location, Ask.",
+      "html": "<button class=\"ds-btn-primary\">Get my plan</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Outfit Variable', Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:1rem;font-weight:600;color:var(--accent-ink,#ffffff);background:var(--accent,#2e7d46);border:1px solid transparent;border-radius:999px;padding:12px 24px;cursor:pointer;transition:transform 120ms cubic-bezier(0.23, 1, 0.32, 1),background-color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-btn-primary:hover{background:var(--accent-strong,#256638)}\n.ds-btn-primary:active{transform:scale(0.97)}\n.ds-btn-primary:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting action on a card: form submits, install, manual entry.",
+      "html": "<button class=\"ds-btn-secondary\">Get frost dates</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Outfit Variable', Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:1rem;font-weight:600;color:var(--ink,#17251a);background:var(--surface,#ffffff);border:1px solid var(--line-strong,#c9d4c5);border-radius:999px;padding:12px 24px;cursor:pointer;transition:transform 120ms cubic-bezier(0.23, 1, 0.32, 1),background-color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-btn-secondary:hover{background:var(--surface-2,#eff4ec)}\n.ds-btn-secondary:active{transform:scale(0.97)}\n.ds-btn-secondary:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-weight action that still needs an accent: Print the checklist.",
+      "html": "<button class=\"ds-btn-ghost\">Print the checklist</button>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Outfit Variable', Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:1rem;font-weight:600;color:var(--accent,#2e7d46);background:transparent;border:1px solid color-mix(in srgb, var(--accent,#2e7d46) 45%, transparent);border-radius:999px;padding:12px 24px;cursor:pointer;transition:transform 120ms cubic-bezier(0.23, 1, 0.32, 1),background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-btn-ghost:hover{background:var(--accent-soft,#e7f2ea);color:var(--accent-strong,#256638)}\n.ds-btn-ghost:active{transform:scale(0.97)}\n.ds-btn-ghost:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field-input",
+      "description": "Mono data input with an uppercase mono label; focus ring in the accent.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Latitude</span><input class=\"ds-input\" type=\"number\" step=\"any\" placeholder=\"42.2808\" /></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px}\n.ds-field-label{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-soft,#4a5a4d)}\n.ds-input{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.95rem;color:var(--ink,#17251a);background:var(--bg,#f7f9f5);border:1px solid var(--line-strong,#c9d4c5);border-radius:10px;padding:10px 12px;min-width:130px;transition:border-color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-input::placeholder{color:var(--placeholder,#647266)}\n.ds-input:focus{border-color:var(--accent,#2e7d46);outline:none;box-shadow:0 0 0 3px color-mix(in srgb, var(--accent,#2e7d46) 22%, transparent)}\n.ds-input:focus-visible{caret-color:var(--accent,#2e7d46)}"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Category filter (crops) with hover and accent-filled active state.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip is-active\">All</button><button class=\"ds-chip\">Vegetables</button><button class=\"ds-chip\">Herbs</button></div>",
+      "css": ".ds-chips{display:flex;gap:8px;flex-wrap:wrap}\n.ds-chip{font-family:'Outfit Variable', Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:0.88rem;font-weight:580;color:var(--ink-soft,#4a5a4d);background:var(--surface,#ffffff);border:1px solid var(--line-strong,#c9d4c5);border-radius:999px;padding:7px 15px;cursor:pointer;transition:background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),color 160ms cubic-bezier(0.23, 1, 0.32, 1),border-color 160ms cubic-bezier(0.23, 1, 0.32, 1),transform 120ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-chip:hover{border-color:var(--accent,#2e7d46);color:var(--accent,#2e7d46)}\n.ds-chip:active{transform:scale(0.97)}\n.ds-chip.is-active{background:var(--accent,#2e7d46);border-color:var(--accent,#2e7d46);color:var(--accent-ink,#ffffff)}\n.ds-chip:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px}"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Sticky translucent header: brand mark, section links, status and icon buttons.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-brand\"><svg viewBox=\"0 0 32 32\" width=\"30\" height=\"30\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"28\" height=\"28\" rx=\"8\" fill=\"currentColor\"/><path d=\"M9 21c0-6 4.5-10 12-10.5C20.4 18 16.4 21.7 9 21.5Z\" fill=\"#fff\"/><path d=\"M9.5 22.5c3-4.5 6.5-7 11-9\" stroke=\"#fff\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/></svg><span class=\"ds-brand-name\">Gardenwise</span></a><nav class=\"ds-nav-links\"><a href=\"#plan\">Plan</a><a href=\"#frost\">Frost dates</a><a href=\"#crops\">Crops</a></nav><span class=\"ds-net-pill\">Online</span></div></header>",
+      "css": ".ds-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--surface,#ffffff) 86%, transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line,#e2e9df)}\n.ds-nav-inner{max-width:1200px;margin:0 auto;height:68px;padding:0 24px;display:flex;align-items:center;gap:28px}\n.ds-brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink,#17251a);text-decoration:none;font-weight:640;font-size:1.06rem;letter-spacing:-0.01em}\n.ds-brand svg{color:var(--accent,#2e7d46);flex:none}\n.ds-nav-links{display:flex;gap:4px;margin-left:8px;flex:1}\n.ds-nav-links a{color:var(--ink-soft,#4a5a4d);text-decoration:none;font-size:0.95rem;font-weight:520;padding:8px 12px;border-radius:999px;transition:background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-nav-links a:hover{background:var(--surface-2,#eff4ec);color:var(--ink,#17251a)}\n.ds-nav-links a:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px;border-radius:4px}\n.ds-net-pill{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.72rem;letter-spacing:0.04em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--accent-soft,#e7f2ea);color:var(--accent-strong,#256638);border:1px solid color-mix(in srgb, var(--accent,#2e7d46) 30%, transparent)}"
+    },
+    {
+      "name": "Task Checklist Item",
+      "kind": "custom",
+      "refersTo": "cards / containers",
+      "description": "The core of the product: a checkable weekly action with mono meta chips.",
+      "html": "<ul class=\"ds-task-list\"><li class=\"ds-task\"><span class=\"ds-task-box\"><svg viewBox=\"0 0 16 16\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.5 8.5l3.5 3.5 7.5-8\"/></svg></span><div class=\"ds-task-body\"><span class=\"ds-task-name\">Sow carrots for an autumn crop</span><div class=\"ds-task-meta\"><span class=\"ds-meta-chip\">70 days</span><span class=\"ds-meta-chip is-frost\">frost-tender</span></div></div></li></ul>",
+      "css": ".ds-task-list{list-style:none;margin:0;padding:0;background:var(--surface,#ffffff);border:1px solid var(--line,#e2e9df);border-radius:16px;overflow:hidden}\n.ds-task{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line,#e2e9df)}\n.ds-task:last-child{border-bottom:0}\n.ds-task-box{width:22px;height:22px;flex:none;border:2px solid var(--line-strong,#c9d4c5);border-radius:7px;margin-top:2px;display:inline-flex;align-items:center;justify-content:center;color:transparent;cursor:pointer;transition:background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),border-color 160ms cubic-bezier(0.23, 1, 0.32, 1),transform 120ms cubic-bezier(0.23, 1, 0.32, 1),color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-task-box:hover{border-color:var(--accent,#2e7d46)}\n.ds-task-box:active{transform:scale(0.92)}\n.ds-task.is-done .ds-task-box{background:var(--accent,#2e7d46);border-color:var(--accent,#2e7d46);color:var(--accent-ink,#ffffff)}\n.ds-task-box:focus-visible{outline:2px solid var(--accent,#2e7d46);outline-offset:2px}\n.ds-task-body{min-width:0}\n.ds-task-name{font-weight:600;display:block;transition:color 160ms cubic-bezier(0.23, 1, 0.32, 1)}\n.ds-task.is-done .ds-task-name{color:var(--ink-soft,#4a5a4d);text-decoration:line-through}\n.ds-task-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}\n.ds-meta-chip{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.7rem;letter-spacing:0.03em;color:var(--ink-soft,#4a5a4d);background:var(--surface-2,#eff4ec);border:1px solid var(--line,#e2e9df);border-radius:999px;padding:3px 9px}\n.ds-meta-chip.is-frost{color:var(--stamp,#c0392b);border-color:color-mix(in srgb, var(--stamp,#c0392b) 40%, transparent);background:color-mix(in srgb, var(--stamp,#c0392b) 8%, transparent)}"
+    },
+    {
+      "name": "Plan Card",
+      "kind": "card",
+      "refersTo": "plan-card",
+      "description": "Signature: the floating record card over the hero photo, carrying the week stamp.",
+      "html": "<div class=\"ds-plan-card\"><div class=\"ds-plan-head\"><span class=\"ds-stamp\">Week of Oct 5</span><span class=\"ds-place\">Example plot</span></div><div class=\"ds-plan-rows\"><div class=\"ds-plan-row\"><span class=\"ds-plan-label\">Last spring frost</span><span class=\"ds-plan-value\">May 3</span></div><div class=\"ds-plan-row\"><span class=\"ds-plan-label\">First autumn frost</span><span class=\"ds-plan-value\">Oct 12</span></div><div class=\"ds-plan-row is-task\"><span class=\"ds-plan-label\">This week</span><span class=\"ds-plan-value\">Sow garlic</span></div></div><p class=\"ds-plan-note\">Showing an example plot until you set your own.</p></div>",
+      "css": ".ds-plan-card{position:relative;background:var(--surface,#ffffff);border:1.5px solid var(--ink,#17251a);border-radius:16px;padding:18px 20px 16px;box-shadow:0 2px 4px rgba(23,37,26,0.06),0 10px 24px rgba(23,37,26,0.12)}\n.ds-plan-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}\n.ds-stamp{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;border:1.5px solid var(--stamp,#c0392b);color:var(--stamp,#c0392b);padding:4px 9px;border-radius:4px;transform:rotate(-1.5deg);white-space:nowrap}\n.ds-place{font-size:0.9rem;font-weight:600;color:var(--ink-soft,#4a5a4d)}\n.ds-plan-rows{border-top:1px solid var(--line,#e2e9df)}\n.ds-plan-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line,#e2e9df)}\n.ds-plan-label{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft,#4a5a4d);padding-top:3px}\n.ds-plan-value{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:1.02rem;font-weight:500;text-align:right}\n.ds-plan-row.is-task .ds-plan-value{color:var(--accent,#2e7d46)}\n.ds-plan-note{margin-top:10px;font-size:0.78rem;color:var(--ink-soft,#4a5a4d)}"
+    },
+    {
+      "name": "Frost Title Block",
+      "kind": "card",
+      "refersTo": "titleblock",
+      "description": "Signature: the ink-outlined four-up data block for frost dates and method.",
+      "html": "<div class=\"ds-titleblock\"><div class=\"ds-tb-cell\"><span class=\"ds-tb-label\">Location</span><span class=\"ds-tb-value\">Detroit, MI</span></div><div class=\"ds-tb-cell\"><span class=\"ds-tb-label\">Last spring frost</span><span class=\"ds-tb-big\">May 3</span></div><div class=\"ds-tb-cell\"><span class=\"ds-tb-label\">First autumn frost</span><span class=\"ds-tb-big\">Oct 12</span></div><div class=\"ds-tb-cell\"><span class=\"ds-tb-label\">Growing season</span><span class=\"ds-tb-big\">162 days</span></div></div>",
+      "css": ".ds-titleblock{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface,#ffffff);border:1.5px solid var(--ink,#17251a);border-radius:16px;overflow:hidden}\n.ds-tb-cell{padding:18px 20px;border-right:1px solid var(--line,#e2e9df);display:flex;flex-direction:column;gap:8px;min-width:0}\n.ds-tb-cell:last-child{border-right:0}\n.ds-tb-label{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:0.7rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-soft,#4a5a4d)}\n.ds-tb-value{font-size:0.98rem;color:var(--ink,#17251a);overflow-wrap:anywhere}\n.ds-tb-big{font-family:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:500;letter-spacing:-0.01em}\n@media (max-width:960px){.ds-titleblock{grid-template-columns:repeat(2,1fr)}.ds-tb-cell:nth-child(2n){border-right:0}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Home-Screen Standard",
+    "overview": [
+      "Gardenwise is a canon build: it should look exactly like the trusted apps its audience already keeps on the home screen (garden peers Planta, PictureThis, Epic Gardening; craft peers Things 3, Apple Weather, Strava), executed without irony. The personality is quiet competence — soft white cards on a faintly green canvas, one leaf-green accent locked page-wide, real garden photography, and a checklist that answers \"what do I do this week\" in seconds.",
+      "Density is plan-first. Information lives in cards and hairline-divided rows; the weekly checklist owns the middle of the page and the assistant is the last, optional section. Emphasis comes from weight and size, never from decoration: there is no gradient text, no glow, no hero-metric stat row. The aesthetic philosophy is a well-kept plot — everything on the page earns its place by being something a gardener acts on or checks.",
+      "Confirmed visual rejections: the generic AI-SaaS look (chat never leads, no model theatrics in the first viewport) and anything untied to real practice — photographs are real and credited, numbers are real frost math, and the browser's own chrome (selection, caret, scrollbars, focus rings) is themed rather than left to defaults."
+    ],
+    "keyCharacteristics": [
+      "One locked leaf-green accent on green-tinted neutrals; white cards divided by hairlines",
+      "Checklist-first composition: the plan leads, the assistant sits last and optional",
+      "Outfit Variable for voice, IBM Plex Mono for data and labels — two families, no more",
+      "16px cards, pill actions, 1.5px ink outlines reserved for the two \"record\" blocks",
+      "Real photography in 20px frames with provenance credited in the footer",
+      "Light and dark as a full token swap off [data-theme='dark']",
+      "One authored motion moment (the week stamp) over a single shared entrance"
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Leaf green is the only accent allowed to spread across a screen. Stamp red and frost blue are state inks: they appear only when the state they name exists — an error, a frost-tender crop, a cold snap, offline — and never as decoration or a second brand color.",
+        "section": "colors"
+      },
+      {
+        "name": "The AA Pair Rule",
+        "body": "Small green text never uses the bright accent; it uses the deep variant on the wash tint. When the theme flips, the pair flips: the deepening green becomes a brightening one so the pair stays legible in both directions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Means Data Rule",
+        "body": "IBM Plex Mono appears only on data, labels, and status — dates, coordinates, counts, uppercase micro-labels, the stamp. Running prose never sets in mono, and mono is never used as a costume for \"technical.\"",
+        "section": "typography"
+      },
+      {
+        "name": "The Variable Steps Rule",
+        "body": "Outfit is a variable face and the build steps it deliberately (640 headings, 660 hero, 520–600 for UI) instead of snapping to 400/700. New text picks a weight from this ramp rather than the browser's default bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Container Rule",
+        "body": "Every section draws from the same 1200px container and is separated by rhythm (64px, 48px on small screens), never by full-bleed color bands. The only content band allowed to break the container edge-to-edge is the footer's surface-tint band; the sticky nav is chrome, and runs edge-to-edge with its own inner container.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hairline-First Rule",
+        "body": "Structure is 1px `line` borders and tonal steps (`canvas` → `surface` → `surface-tint`); shadow only confirms elevation on top of them. Print styles strip shadows entirely.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Floating Shadow Rule",
+        "body": "The floating shadow is reserved for elements that overlap photography — today, the hero plan card. Nothing else earns the second shadow step.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pill Means Action Rule",
+        "body": "Fully rounded means interactive; 10–16px rounded rectangles mean readable. New controls follow it, and content cards never go pill-shaped.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Ink Outline Rule",
+        "body": "A 1.5px `ink` outline marks \"the record\": the floating plan card and the frost title block. Ordinary cards stay on hairlines — do not promote the ink outline to a default card treatment.",
+        "section": "shapes"
+      },
+      {
+        "name": "The One Moment Rule",
+        "body": "One bespoke animation exists in this system — the week stamp's `stamp-hit`. Every other appearance is the shared rise entrance, staggered by index; new surfaces do not invent their own entrances.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep one accent: leaf green for every primary action, active state, link, and focus; use the deep variant for small green text on tints.",
+      "Do keep actions pill-shaped (999px) and containers at 16px, inputs at 10px, photos at 20px.",
+      "Do theme the browser's own surfaces from the palette — selection, caret, scrollbar, and focus rings are already tokenized; new UI should be too.",
+      "Do set dates, coordinates, counts, status, and micro-labels in IBM Plex Mono at 0.7–1.02rem; keep prose in Outfit.",
+      "Do reserve the 1.5px ink outline for record blocks (plan card, title block) and hairlines for everything else.",
+      "Do let list surfaces enter with the shared rise entrance, staggered by index, and keep the stamp as the single authored animation.",
+      "Do keep the plan ahead of the assistant: the chat section stays last, optional, and visually quieter than the checklist.",
+      "Do credit every raster's provenance in the footer — photographs ship with their source."
+    ],
+    "donts": [
+      "Don't introduce a second bright accent, or use stamp red / frost blue decoratively — they name states only.",
+      "Don't use hard offset shadows (`4px 4px 0`), gradient text, or glass/blur as decoration; depth is soft, low-opacity, and ink-tinted (the nav's backdrop blur is functional, tied to stickiness).",
+      "Don't set a kicker or eyebrow above a heading — headings carry their own weight at 640 / −0.02em.",
+      "Don't reach for a system display face or unicode/emoji glyphs as icons; Outfit is the display voice, and icons come from Phosphor (self-hosted) or authored SVG.",
+      "Don't put chat, model loading, or a hero-metric stat row in front of the plan.",
+      "Don't ship a new surface whose selection, caret, scrollbar, or focus treatment falls back to browser defaults."
+    ]
+  }
+}

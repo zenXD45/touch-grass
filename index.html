@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2E7D46" />
+    <meta name="description" content="Gardenwise — know what to plant this week. Frost dates from open climate data, a checklist for your plot, and an optional open-weight assistant that runs entirely on your device." />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <title>Gardenwise — know what to plant this week</title>
+    <script>
+      try {
+        var t = localStorage.getItem('gardenwise:theme')
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Gardenwise home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="8" fill="currentColor" />
+            <path d="M9 21c0-6 4.5-10 12-10.5C20.4 18 16.4 21.7 9 21.5Z" fill="#fff" />
+            <path d="M9.5 22.5c3-4.5 6.5-7 11-9" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" />
+          </svg>
+          <span class="brand-name">Gardenwise</span>
+        </a>
+        <nav class="nav-links" id="nav-sections" aria-label="Sections">
+          <a href="#plan">Plan</a>
+          <a href="#frost">Frost dates</a>
+          <a href="#crops">Crops</a>
+          <a href="#offline">Offline</a>
+          <a href="#ask">Ask</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="net-pill" data-net-pill hidden></span>
+          <button class="icon-btn" data-theme-toggle type="button" aria-label="Toggle color theme">
+            <i class="ph ph-sun" data-icon-sun></i>
+            <i class="ph ph-moon-stars" data-icon-moon></i>
+          </button>
+          <a class="icon-btn" href="https://github.com/zenXD45/touch-grass" data-github-link aria-label="GitHub repository" target="_blank" rel="noreferrer">
+            <i class="ph ph-github-logo"></i>
+          </a>
+          <button class="icon-btn nav-toggle" data-nav-toggle type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-sections">
+            <i class="ph ph-list" data-icon-menu></i>
+            <i class="ph ph-x" data-icon-close></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Know what to plant this week.</h1>
+          <p class="hero-sub">Frost dates for your ground, one checklist for the week, and your data never leaves your device.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#plan">Get my plan</a>
+            <a class="link-quiet" href="#offline">How offline works <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-photo" src="./src/assets/img/hero.jpg" alt="A summer vegetable garden with raised beds full of lettuces and greens" width="1600" height="1067" fetchpriority="high" />
+          <div class="plan-card" data-hero-card>
+            <div class="plan-card-head">
+              <span class="stamp stamp-week" data-hero-week>WEEK OF —</span>
+              <span class="plan-card-place"><i class="ph ph-map-pin"></i> <span data-hero-place>Example plot</span></span>
+            </div>
+            <div class="plan-card-rows">
+              <div class="plan-row">
+                <span class="plan-row-label">Last spring frost</span>
+                <span class="plan-row-value" data-hero-last>—</span>
+              </div>
+              <div class="plan-row">
+                <span class="plan-row-label">First autumn frost</span>
+                <span class="plan-row-value" data-hero-first>—</span>
+              </div>
+              <div class="plan-row plan-row-task">
+                <span class="plan-row-label">This week</span>
+                <span class="plan-row-value" data-hero-task>Set your ground</span>
+              </div>
+            </div>
+            <p class="plan-card-note" data-hero-note>Showing an example plot until you set your own.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="plan">
+        <div class="section-head">
+          <h2>This week on your plot</h2>
+          <div class="week-tabs" role="tablist" aria-label="Choose week">
+            <button class="week-tab is-active" type="button" data-week="0" role="tab" aria-selected="true">This week</button>
+            <button class="week-tab" type="button" data-week="1" role="tab" aria-selected="false">Next week</button>
+          </div>
+        </div>
+
+        <form class="loc-form" data-loc-form>
+          <div class="loc-main">
+            <button class="btn btn-primary" type="button" data-use-location>
+              <i class="ph ph-navigation"></i> Use my location
+            </button>
+            <div class="loc-fields">
+              <div class="field">
+                <label for="in-lat">Latitude</label>
+                <input id="in-lat" name="lat" type="number" step="any" min="-90" max="90" placeholder="42.2808" inputmode="decimal" />
+              </div>
+              <div class="field">
+                <label for="in-lon">Longitude</label>
+                <input id="in-lon" name="lon" type="number" step="any" min="-180" max="180" placeholder="-83.7430" inputmode="decimal" />
+              </div>
+              <button class="btn btn-secondary" type="submit">Get frost dates</button>
+            </div>
+          </div>
+          <p class="form-status" data-loc-status role="status" aria-live="polite"></p>
+          <details class="manual">
+            <summary>I already know my frost dates</summary>
+            <div class="manual-fields">
+              <div class="field">
+                <label for="in-last">Last spring frost</label>
+                <input id="in-last" name="last" type="date" />
+              </div>
+              <div class="field">
+                <label for="in-first">First autumn frost</label>
+                <input id="in-first" name="first" type="date" />
+              </div>
+              <button class="btn btn-secondary" type="button" data-use-manual>Use these dates</button>
+            </div>
+          </details>
+        </form>
+
+        <div class="frost-banner" data-frost-banner hidden>
+          <i class="ph ph-snowflake"></i>
+          <div>
+            <strong data-frost-banner-title>Frost watch</strong>
+            <p data-frost-banner-text></p>
+          </div>
+        </div>
+
+        <div class="checklist" data-checklist>
+          <div class="empty-state">
+            <i class="ph ph-plant"></i>
+            <h3>Your week will print here</h3>
+            <p>Set your location above, or your own frost dates, and this fills with actions for your ground.</p>
+          </div>
+        </div>
+
+        <div class="section-actions">
+          <button class="btn btn-ghost" type="button" data-print>
+            <i class="ph ph-printer"></i> Print the checklist
+          </button>
+        </div>
+      </section>
+
+      <section class="section" id="frost">
+        <div class="section-head">
+          <h2>Your frost dates</h2>
+        </div>
+        <div class="titleblock" data-titleblock>
+          <div class="tb-cell">
+            <span class="tb-label">Location</span>
+            <span class="tb-value" data-tb-place>Not set</span>
+          </div>
+          <div class="tb-cell">
+            <span class="tb-label">Last spring frost</span>
+            <span class="tb-value tb-big" data-tb-last>—</span>
+          </div>
+          <div class="tb-cell">
+            <span class="tb-label">First autumn frost</span>
+            <span class="tb-value tb-big" data-tb-first>—</span>
+          </div>
+          <div class="tb-cell">
+            <span class="tb-label">Growing season</span>
+            <span class="tb-value tb-big" data-tb-season>—</span>
+          </div>
+          <div class="tb-cell tb-method">
+            <span class="tb-label">Method</span>
+            <span class="tb-value" data-tb-method>2020–2025 daily normals, ≤ 0 °C crossings, averaged, from Open-Meteo climate API (CC BY 4.0)</span>
+          </div>
+        </div>
+        <p class="section-note" data-cache-note></p>
+      </section>
+
+      <section class="section" id="crops">
+        <div class="section-head">
+          <h2>Crop notes</h2>
+          <div class="crop-tools">
+            <div class="field field-search">
+              <label class="sr-only" for="crop-search">Search crops</label>
+              <i class="ph ph-magnifying-glass"></i>
+              <input id="crop-search" type="search" placeholder="Search crops…" data-crop-search />
+            </div>
+            <div class="chips" data-crop-chips>
+              <button class="chip is-active" type="button" data-cat="all">All</button>
+              <button class="chip" type="button" data-cat="veg">Vegetables</button>
+              <button class="chip" type="button" data-cat="herb">Herbs</button>
+              <button class="chip" type="button" data-cat="flower">Flowers</button>
+            </div>
+          </div>
+        </div>
+        <div class="crop-grid" data-crop-grid></div>
+      </section>
+
+      <section class="section section-offline" id="offline">
+        <div class="offline-media">
+          <img src="./src/assets/img/harvest.jpg" alt="A basket of freshly picked tomatoes and peppers" width="1000" height="750" />
+        </div>
+        <div class="offline-copy">
+          <h2>Works without signal</h2>
+          <ul class="proof-list">
+            <li>
+              <i class="ph ph-wifi-slash"></i>
+              <div><strong>No internet after setup</strong><p>First visit fetches your frost normals and caches them; the app shell installs for offline use. Then pull the plug.</p></div>
+            </li>
+            <li>
+              <i class="ph ph-lock-key"></i>
+              <div><strong>Your ground stays yours</strong><p>Coordinates, dates and check-offs live in this browser only. No accounts, no analytics, no server of ours.</p></div>
+            </li>
+            <li>
+              <i class="ph ph-currency-circle-dollar"></i>
+              <div><strong>Costs nothing to run</strong><p>Open climate data, an open-weight model running on your device, static hosting. No API keys, no usage meter.</p></div>
+            </li>
+          </ul>
+          <div class="offline-actions">
+            <button class="btn btn-secondary" type="button" data-install hidden>
+              <i class="ph ph-download-simple"></i> Install app
+            </button>
+            <span class="net-line" data-net-line></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ask">
+        <div class="section-head">
+          <h2>Ask your garden</h2>
+        </div>
+        <p class="section-lede">Optional. A small open-weight model runs <em>inside this tab</em>. Questions and answers never reach a server. Download once (once per model), then ask offline.</p>
+        <div class="chat" data-chat>
+          <div class="chat-setup" data-chat-setup>
+            <div class="field">
+              <label for="model-pick">Model</label>
+              <select id="model-pick" data-model-pick>
+                <option value="Qwen2.5-1.5B-Instruct-q4f16_1-MLC">Qwen2.5 1.5B (default, ~1.6 GB)</option>
+                <option value="SmolLM2-360M-Instruct-q4f16_1-MLC">SmolLM2 360M (small &amp; fast, ~0.4 GB)</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="button" data-load-model>
+              <i class="ph ph-cpu"></i> Load model on device
+            </button>
+            <p class="chat-hint" data-chat-hint>Needs a WebGPU-capable browser. The planner above never does.</p>
+            <div class="progress" data-chat-progress hidden>
+              <div class="progress-bar" data-chat-progress-bar></div>
+            </div>
+            <p class="progress-label" data-chat-progress-label hidden></p>
+          </div>
+          <div class="chat-log" data-chat-log hidden>
+            <div class="chat-msg chat-msg-ai" data-chat-welcome hidden></div>
+          </div>
+          <form class="chat-input" data-chat-form hidden>
+            <label class="sr-only" for="chat-q">Ask a question</label>
+            <input id="chat-q" type="text" placeholder="Will my tomatoes survive a cold snap?" autocomplete="off" data-chat-text />
+            <button class="btn btn-primary" type="submit" data-chat-send>Ask</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-name">Gardenwise</span>
+          <p>An offline-first planner for Hacktoberfest's Touch Grass challenge. Code MIT, plant guidance is general, always your local conditions that decide.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h3>Open sources</h3>
+            <p>Frost normals &amp; forecasts: Open-Meteo (CC BY 4.0)</p>
+            <p>Assistant: Qwen2.5-1.5B &amp; SmolLM2 open weights via WebLLM (Apache-2.0)</p>
+          </div>
+          <div>
+            <h3>Photographs</h3>
+            <p>"Vegetable garden with raised beds, Trimingham" (Kolforn, CC BY-SA 4.0)</p>
+            <p>"Basket of tomatoes and peppers" (NPS, public domain)</p>
+          </div>
+          <div>
+            <h3>Project</h3>
+            <p><a href="https://github.com/zenXD45/touch-grass" data-github-link target="_blank" rel="noreferrer">Source on GitHub</a></p>
+            <p><a href="#plan">Back to the plan</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

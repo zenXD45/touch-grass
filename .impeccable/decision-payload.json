@@ -1,0 +1,165 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned The Allotment Survey. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Allotment Survey",
+      "kicker": "THE ROLL",
+      "lineage": "cadastral survey plans & allotment plot drawings",
+      "thesis": "The garden drawn as a surveyed plan, with this week's work stamped into the drawing like revision marks.",
+      "palette": ["#EFE7D5", "#1A1712", "#4E7A3E", "#C0392B", "#3E6E8E"],
+      "materials": ["drafting paper", "hairline ink rules", "rubber stamps"],
+      "viewport": "A full-width plot plan of beds; the drawing's title block sits bottom-right carrying location, frost dates, and the week; this week's tasks lie across it as red stamp annotations.",
+      "risk": "Reads dry and technical if the stamps, hatching, and bed labels stay timid.",
+      "raised": [
+        { "from": "challenger-japanese-high-density", "raise": "Catalog-density discipline: every plant card is a hairline-ruled spec tile with a small tab header — parts-catalog packing, never a SaaS card." },
+        { "from": "challenger-boarding-pass", "raise": "Row identity: ledger rows rerank in place as dates shift, and a moved task holds its alert tint until noticed." },
+        { "from": "challenger-darkroom-exposure", "raise": "Hatch-density symbology: cross-hatch marks frost-risk beds on the plan, quantity carried by texture, not color." }
+      ],
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "week strip", "x": 0, "y": 0, "w": 12, "h": 1 },
+          { "label": "plot plan: beds, north arrow, hatching", "x": 0, "y": 1, "w": 9, "h": 6 },
+          { "label": "legend rail", "x": 9, "y": 1, "w": 3, "h": 6 },
+          { "label": "stamped task ledger", "x": 0, "y": 7, "w": 8, "h": 3 },
+          { "label": "title block: location · frost dates · drawn week", "x": 8, "y": 7, "w": 4, "h": 3, "accent": true }
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "The Seed Catalog Spread",
+      "kicker": "IMPECCABLE'S PICK",
+      "lineage": "mail-order seed catalogs & chromolithograph plates",
+      "thesis": "Every crop as a catalog plate with a spec block, and this week's picks circled in pen.",
+      "palette": ["#FBF4E4", "#1E1B16", "#D8471F", "#2E6B3A", "#E3A11B"],
+      "materials": ["offset print", "chromolithograph plates", "pen marks"],
+      "viewport": "Two-column spread: illustrated crop plates left, dense spec blocks right, this week's entries circled biro-style across the fold.",
+      "risk": "Also where most garden builds land — familiar by design, which is the trade you'd be choosing.",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "catalog masthead", "x": 0, "y": 0, "w": 12, "h": 1, "accent": true },
+          { "label": "crop plate grid", "x": 0, "y": 1, "w": 7, "h": 9 },
+          { "label": "spec blocks", "x": 7, "y": 1, "w": 5, "h": 6 },
+          { "label": "circled this-week picks", "x": 7, "y": 7, "w": 5, "h": 3 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-wayfinding",
+      "label": "Terminal Yellow Wayfinding",
+      "verdict": "competitive",
+      "lineage": "international airport sign systems",
+      "thesis": "The week as a run of decision bands: one action per band, the wait time set monumental.",
+      "palette": ["#FFCC00", "#0B0B0B", "#E6E6E6", "#FFFFFF"],
+      "materials": ["matte sign panels", "pictogram insets", "edge-locked arrows"],
+      "viewport": "Saturated yellow bands stacked down the page — 'START INDOORS · 6 weeks before last frost' — with dates at gate-number scale.",
+      "case": "Fuses cleanly: sow-windows read like walk-times, one decision per glance; it holds clarity but loses audience identification — travel is not gardening.",
+      "risk": "Reads transit-loud when every band shouts.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding.webp",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "band: START INDOORS, monumental date", "x": 0, "y": 0, "w": 12, "h": 3, "accent": true },
+          { "label": "band: DIRECT SOW", "x": 0, "y": 3, "w": 12, "h": 3 },
+          { "label": "band: PROTECT FROM FROST", "x": 0, "y": 6, "w": 12, "h": 2 },
+          { "label": "wayfinding index strip", "x": 0, "y": 8, "w": 12, "h": 2 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-orienteering",
+      "label": "Orienteering Plot & Course",
+      "verdict": "competitive",
+      "lineage": "ISOM orienteering maps & course overprints",
+      "thesis": "Your plot as terrain: beds are the map, this week's tasks are numbered controls on a course you run outside.",
+      "palette": ["#FFFFFF", "#FFD24D", "#A5B36A", "#8C5A2B", "#7B2CBF"],
+      "materials": ["contour ink", "isom flat color", "purple course overprint"],
+      "viewport": "A metric plot map with numbered task controls strung on a purple course line, legend ranked at the side.",
+      "case": "Fuses well: tasks as controls to punch keeps the outdoors identity; it loses narrowly on clarity — frost math, not terrain, drives the week.",
+      "risk": "The course metaphor strains when a task is calendar-bound rather than spatial.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-orienteering-map-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/notation-diagram-systems-orienteering-map.webp",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "plot map with controls 1-2-3", "x": 0, "y": 0, "w": 9, "h": 10 },
+          { "label": "legend + course stats rail", "x": 9, "y": 0, "w": 3, "h": 10, "accent": true }
+        ]
+      }
+    },
+    {
+      "id": "challenger-newsprint",
+      "label": "Newsprint Circle Catalog",
+      "verdict": "competitive",
+      "lineage": "single-ink event catalogs printed on newsprint",
+      "thesis": "The week's plan as a cheap single-ink catalog grid, everything relevant circled by hand.",
+      "palette": ["#E6E2D8", "#111111", "#B9B5AD", "#C8322D"],
+      "materials": ["newsprint fiber", "single-ink type", "biro marks"],
+      "viewport": "Stamp-sized crop cells packed edge to edge, this week's actions circled in pen, a small keyed map at the foot.",
+      "case": "Fuses strongly on ritual — circling catalog entries is how gardeners plan; it holds identification but loses clarity — a browse grid cannot lead a do-list.",
+      "risk": "Reads zine-cute when the grid discipline slips.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog.webp",
+      "wireframe": {
+        "cols": 12, "rows": 10,
+        "regions": [
+          { "label": "single-ink masthead", "x": 0, "y": 0, "w": 12, "h": 1 },
+          { "label": "stamp cell grid", "x": 0, "y": 1, "w": 8, "h": 9 },
+          { "label": "circled this-week cells + keyed map", "x": 8, "y": 1, "w": 4, "h": 9, "accent": true }
+        ]
+      }
+    },
+    {
+      "id": "challenger-japanese-high-density",
+      "label": "High-Density Module Mosaic",
+      "verdict": "declined",
+      "lineage": "Japanese contemporary high-density commerce sites",
+      "thesis": "One screen, hundreds of hairline-boxed modules, utility-red tabs, tiny type, zero wasted pixels.",
+      "palette": ["#FFFFFF", "#111111", "#E60012", "#EFEFEF"],
+      "materials": ["hairline borders", "red tab headers"],
+      "viewport": "A packed mosaic of spec tiles with small red header tabs tiling edge to edge.",
+      "case": "Loses both axes: commerce-site density is not a gardener's world, and a mosaic cannot give the checklist-first plan one clear thesis.",
+      "kept": "Its hairline spec-tile density now sets every plant card in the plan."
+    },
+    {
+      "id": "challenger-boarding-pass",
+      "label": "Pass & Departure Board",
+      "verdict": "declined",
+      "lineage": "boarding passes and live gate boards",
+      "thesis": "The week as a departure board: rows rank by time, a change flashes and holds, rows never teleport.",
+      "palette": ["#F7F5F0", "#111111", "#D97706"],
+      "materials": ["monospace scannable block", "tabular figures"],
+      "viewport": "Segments of a pass above a ranked task board with one alert-tinted change.",
+      "case": "Loses both axes: travel ephemera belong at an airport, and time-ranking loses to a plan you stamp and print.",
+      "kept": "Its rerank-in-place row identity now governs how ledger rows move when dates shift."
+    },
+    {
+      "id": "challenger-darkroom-exposure",
+      "label": "Darkroom Exposure Record",
+      "verdict": "declined",
+      "lineage": "printer's zone records & tracing-sheet overlays",
+      "thesis": "Working surface as overlapping translucent sheets over a backlit eleven-step ramp; hatch density is load, crossed hatches are conflict.",
+      "palette": ["#101418", "#9FB4C0", "#D946EF"],
+      "materials": ["zone-ramp neutrals", "hatch overlays"],
+      "viewport": "Stacked record sheets with hatched regions and a magenta filtration mark.",
+      "case": "Loses both axes: darkroom language is indoor and technical, and its tonal ramp has no job in a frost-date plan.",
+      "kept": "Its hatch-density language now marks frost-risk on the plan's beds."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What every garden planner ships: white cards, a soft green accent, stock plant photography, and a chat bubble in the corner.",
+    "palette": ["#FFFFFF", "#F6F7F4", "#3F8F4A"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "The arrangement a visitor expects, at full craft.",
+    "risk": "Indistinguishable from every other planner, by design."
+  },
+  "steer": true
+}
