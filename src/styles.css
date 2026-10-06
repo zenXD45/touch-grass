@@ -80,8 +80,10 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover {
-  color: var(--accent-strong);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--accent-strong);
+  }
 }
 
 h1,
@@ -167,9 +169,11 @@ p {
   transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
 }
 
-.nav-links a:hover {
-  background: var(--surface-2);
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .nav-links a:hover {
+    background: var(--surface-2);
+    color: var(--ink);
+  }
 }
 
 .nav-actions {
@@ -194,9 +198,11 @@ p {
   transition: transform 120ms var(--ease-out), background-color 160ms var(--ease-out), color 160ms var(--ease-out);
 }
 
-.icon-btn:hover {
-  background: var(--surface-2);
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:hover {
+    background: var(--surface-2);
+    color: var(--ink);
+  }
 }
 
 .icon-btn:active {
@@ -285,8 +291,10 @@ html:not([data-theme='dark']) [data-icon-moon] {
   color: var(--accent-ink);
 }
 
-.btn-primary:hover {
-  background: var(--accent-strong);
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    background: var(--accent-strong);
+  }
 }
 
 .btn-secondary {
@@ -295,8 +303,10 @@ html:not([data-theme='dark']) [data-icon-moon] {
   border-color: var(--line-strong);
 }
 
-.btn-secondary:hover {
-  background: var(--surface-2);
+@media (hover: hover) and (pointer: fine) {
+  .btn-secondary:hover {
+    background: var(--surface-2);
+  }
 }
 
 .btn-ghost {
@@ -305,9 +315,11 @@ html:not([data-theme='dark']) [data-icon-moon] {
   border-color: color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
-.btn-ghost:hover {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+@media (hover: hover) and (pointer: fine) {
+  .btn-ghost:hover {
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+  }
 }
 
 .link-quiet {
@@ -320,8 +332,10 @@ html:not([data-theme='dark']) [data-icon-moon] {
   gap: 6px;
 }
 
-.link-quiet:hover {
-  color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .link-quiet:hover {
+    color: var(--accent);
+  }
 }
 
 .hero-visual {
@@ -726,7 +740,7 @@ textarea,
   padding: 14px 18px;
   border-bottom: 1px solid var(--line);
   animation: rise 0.28s var(--ease-out) both;
-  animation-delay: calc(var(--i, 0) * 45ms);
+  animation-delay: min(calc(var(--i, 0) * 45ms), 400ms);
 }
 
 .task-item:last-child {
@@ -754,12 +768,14 @@ textarea,
   transition: background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), transform 120ms var(--ease-out), color 160ms var(--ease-out);
 }
 
-.task-box:hover {
-  border-color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .task-box:hover {
+    border-color: var(--accent);
+  }
 }
 
 .task-box:active {
-  transform: scale(0.92);
+  transform: scale(0.95);
 }
 
 .task-item input:checked + .task-box {
@@ -911,9 +927,11 @@ textarea,
   transform: scale(0.97);
 }
 
-.chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 }
 
 .chip.is-active {
@@ -936,15 +954,19 @@ textarea,
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: border-color 160ms var(--ease-out), transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+  transition: border-color 160ms var(--ease-out);
   animation: rise 0.28s var(--ease-out) both;
-  animation-delay: calc(var(--i, 0) * 30ms);
+  animation-delay: min(calc(var(--i, 0) * 30ms), 360ms);
 }
 
-.crop-card:hover {
-  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-1);
+.crop-grid.no-anim .crop-card {
+  animation: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .crop-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  }
 }
 
 .crop-card h3 {
@@ -1195,6 +1217,17 @@ textarea,
   }
 }
 
+@keyframes nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes stamp-hit {
   0% {
     transform: rotate(-1.5deg) scale(1);
@@ -1341,6 +1374,7 @@ textarea,
 
   .nav.is-open .nav-links {
     display: flex;
+    animation: nav-in 180ms var(--ease-out) both;
   }
 
   .nav-links a {

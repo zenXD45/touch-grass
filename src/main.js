@@ -160,10 +160,10 @@ function renderHero() {
   $('[data-hero-place]').textContent = placeLabel
   $('[data-hero-last]').textContent = state.normals?.last
     ? fmtDate(fromMMDDLocal(state.normals.last))
-    : '—'
+    : 'Not set'
   $('[data-hero-first]').textContent = state.normals?.first
     ? fmtDate(fromMMDDLocal(state.normals.first))
-    : '—'
+    : 'Not set'
   const groups = planGroups()
   const firstTask = groups[0]?.tasks[0]
   $('[data-hero-task]').textContent = firstTask
@@ -195,25 +195,25 @@ function renderTitleblock() {
     ? 'None typical'
     : n?.last
       ? fmtDate(fromMMDDLocal(n.last))
-      : '—'
+      : 'Not set'
   $('[data-tb-first]').textContent = n?.noFrost
     ? 'None typical'
     : n?.first
       ? fmtDate(fromMMDDLocal(n.first))
-      : '—'
+      : 'Not set'
   if (n?.last && n?.first) {
     const a = fromMMDDLocal(n.last)
     const b = fromMMDDLocal(n.first)
     const days = Math.max(0, Math.round((b - a) / 86400000))
     $('[data-tb-season]').textContent = `${days} days`
   } else {
-    $('[data-tb-season]').textContent = '—'
+    $('[data-tb-season]').textContent = 'Not set'
   }
   $('[data-tb-method]').textContent = n?.source?.startsWith('entered')
     ? 'Entered by hand; nothing was transmitted.'
     : n
       ? `${n.years || '6'}-year daily normals, ≤ 0 °C crossings averaged, from Open-Meteo climate API (CC BY 4.0)`
-      : '2020–2025 daily normals, ≤ 0 °C crossings, averaged, from Open-Meteo climate API (CC BY 4.0)'
+      : '2020-2025 daily normals, ≤ 0 °C crossings, averaged, from Open-Meteo climate API (CC BY 4.0)'
   const note = $('[data-cache-note]')
   if (n) {
     const when = new Date(n.fetchedAt).toLocaleString('en-US', {
@@ -307,8 +307,9 @@ function renderBanner() {
 const CROPS = allPlants()
 let cropFilter = { cat: 'all', q: '' }
 
-function renderCrops() {
+function renderCrops({ animate = true } = {}) {
   const grid = $('[data-crop-grid]')
+  grid.classList.toggle('no-anim', !animate)
   const q = cropFilter.q.trim().toLowerCase()
   const list = CROPS.filter(
     (p) =>
@@ -461,7 +462,7 @@ function initCrops() {
   search.placeholder = `Search ${CROPS.length} crops…`
   search.addEventListener('input', () => {
     cropFilter.q = search.value
-    renderCrops()
+    renderCrops({ animate: false })
   })
   $('[data-crop-chips]').addEventListener('click', (e) => {
     const chip = e.target.closest('.chip')
