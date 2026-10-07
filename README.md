@@ -1,6 +1,6 @@
 # Gardenwise
 
-An offline-first garden planner: frost dates for your ground, one checklist for the week, and an open-weight model that runs in your browser. Built for Hacktoberfest's **Touch Grass** challenge.
+An offline-first garden planner: frost dates for your ground, one checklist for the week, and an open-weight model that runs in your browser. Built around the idea of touching grass.
 
 No account, no server of ours, no telemetry. Your location and frost dates live in `localStorage` on your device.
 

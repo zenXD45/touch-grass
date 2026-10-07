@@ -12,7 +12,7 @@ Vite + vanilla JavaScript (user-confirmed 2026-10-06; scaffolded with @mlc-ai/we
 
 ## Users
 
-Global home gardeners — anyone with a patch of ground, any hemisphere or climate — plus the Hacktoberfest/DEV audience evaluating the build. Primary job: know what to sow, plant, or protect this week, then close the screen and go outside.
+Global home gardeners — anyone with a patch of ground, any hemisphere or climate. Primary job: know what to sow, plant, or protect this week, then close the screen and go outside.
 
 ## Product Purpose
 
@@ -27,7 +27,7 @@ The plan and the assistant both run on the user's device: frost dates cached loc
 - First run: needs network once to (a) download the open-weight model (~0.4–1.6 GB, browser-cached) and (b) fetch climate normals for the chosen coordinates — or the user types frost dates manually and never touches the network at all.
 - Subsequent runs: fully offline (PWA shell + cached data + cached model).
 - Ritual: weekly check lasting minutes, with a screen-to-outdoors handoff via a printable checklist.
-- Long-lived artifact: public GitHub repo + DEV post for the Hacktoberfest "Touch Grass" challenge; the post must answer: runs with no internet, keeps data off third-party servers, allows swapping/fine-tuning models, costs nothing, and where the open approach beat a closed one.
+- Long-lived artifact: public GitHub repo + DEV post; the post must answer: runs with no internet, keeps data off third-party servers, allows swapping/fine-tuning models, costs nothing, and where the open approach beat a closed one.
 
 ## Capabilities and Constraints
 
@@ -47,7 +47,7 @@ The plan and the assistant both run on the user's device: frost dates cached loc
 
 - Open-Meteo climate + forecast APIs: live-tested 2026-10-06, no key required, daily temperature_2m_min available.
 - @mlc-ai/web-llm 0.2.85 with prebuiltAppConfig.model_list (163 entries); model IDs and sizes verified locally.
-- Hacktoberfest challenge brief (user-provided): theme "Touch Grass", open-source AI at its core, post must address offline/private/free/swap.
+- Project brief: open-source AI at its core, with clear answers about offline use, privacy, cost, and model choice.
 - No user-provided brand assets, screenshots, or garden content; the planting table must be authored from general horticultural knowledge and must not fabricate institutional endorsements.
 
 ## Product Principles

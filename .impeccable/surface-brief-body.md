@@ -1,6 +1,6 @@
 # Surface brief — index.html (app, single page)
 
-Scope: one-page Operate-mode planner app; audience global home gardeners + Hacktoberfest/DEV reviewers; job = know what to do this week on your own ground in under a minute, then go outside; primary action = get/generate the weekly plan; proof = real frost math from open data, offline after first load, open-weight chat optional; constraints: checklist-first, no AI-SaaS look, tied to real practice, canon at peer-app craft.
+Scope: one-page Operate-mode planner app; audience global home gardeners; job = know what to do this week on your own ground in under a minute, then go outside; primary action = get/generate the weekly plan; proof = real frost math from open data, offline after first load, open-weight chat optional; constraints: checklist-first, no AI-SaaS look, tied to real practice, canon at peer-app craft.
 
 Chosen direction: canon (category standard) after roll seed 98fe0693; memorable moment = the plan card stamping this week's actions over real frost dates the moment coordinates resolve.
 
