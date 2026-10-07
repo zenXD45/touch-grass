@@ -580,6 +580,7 @@ function initChat() {
   const log = $('[data-chat-log]')
   const form = $('[data-chat-form]')
   const welcome = $('[data-chat-welcome]')
+  let compatibilityMode = false
 
   if (!webgpuAvailable()) {
     loadBtn.disabled = true
@@ -594,13 +595,27 @@ function initChat() {
     label.hidden = false
     label.textContent = 'Preparing…'
     try {
-      await loadModel(modelId, (p, text) => {
-        bar.style.transform = `scaleX(${p})`
-        label.textContent = `${Math.round(p * 100)}% · ${text.slice(0, 80)}`
-      })
+      await loadModel(
+        modelId,
+        (p, text) => {
+          bar.style.transform = `scaleX(${p})`
+          label.textContent = `${Math.round(p * 100)}% · ${text.slice(0, 80)}`
+        },
+        () => {
+          compatibilityMode = true
+          label.textContent = 'This browser lacks shader-f16. Switching to a compatible model build; it may need a separate download.'
+        },
+      )
       setup.querySelector('.field').hidden = true
       loadBtn.hidden = true
-      label.textContent = modelLoaded() ? 'Model ready. It lives in this tab now.' : ''
+      label.textContent = modelLoaded()
+        ? compatibilityMode
+          ? 'Compatible model ready. It lives in this tab now.'
+          : 'Model ready. It lives in this tab now.'
+        : ''
+      if (compatibilityMode) {
+        hint.textContent = 'Helium does not expose shader-f16 here, so Gardenwise selected a compatible model build.'
+      }
       progress.hidden = true
       log.hidden = false
       form.hidden = false
