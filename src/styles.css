@@ -661,7 +661,7 @@ textarea,
 .checklist {
   margin-top: 26px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 20px;
   align-items: start;
 }
@@ -942,7 +942,7 @@ textarea,
 
 .crop-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 248px), 1fr));
   gap: 16px;
 }
 
@@ -1141,6 +1141,7 @@ textarea,
 }
 
 .chat-input input {
+  min-width: 0;
   flex: 1;
   font-family: var(--font);
   font-size: 1rem;
@@ -1473,4 +1474,103 @@ textarea,
   .tb-big {
     font-size: 1.1rem;
   }
+}
+
+/* Small-screen layout: keep the weekly plan and its controls comfortable to use. */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 76px; }
+  .nav-inner { padding-inline: 16px; gap: 10px; }
+  .nav-actions { gap: 8px; margin-left: auto; }
+  .icon-btn { width: 44px; height: 44px; flex: none; }
+  .nav-links a { min-height: 44px; display: flex; align-items: center; }
+
+  .hero { padding: 34px 18px 28px; gap: 24px; }
+  .hero h1 { font-size: clamp(2.1rem, 8.5vw, 2.7rem); text-wrap: balance; }
+  .hero-sub { margin-top: 14px; font-size: 1.05rem; }
+  .hero-cta { margin-top: 22px; gap: 12px 18px; }
+  .hero-visual { display: flex; flex-direction: column; }
+  .hero-photo { aspect-ratio: 5 / 4; }
+  .plan-card {
+    position: relative;
+    inset: auto;
+    width: calc(100% - 20px);
+    margin: -22px auto 0;
+    padding: 16px;
+  }
+
+  .section-head { align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+  .week-tabs { width: 100%; }
+  .week-tab { min-height: 44px; flex: 1; padding-inline: 12px; }
+  .loc-form { padding: 16px; }
+  .loc-main { align-items: stretch; flex-direction: column; gap: 14px; }
+  .loc-main > .btn,
+  .loc-fields > .btn,
+  .manual-fields > .btn { width: 100%; min-height: 48px; }
+  .loc-fields,
+  .manual-fields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+    gap: 12px;
+  }
+  .loc-fields .field,
+  .manual-fields .field { min-width: 0; }
+  .loc-fields .field input,
+  .manual-fields .field input,
+  .field select { width: 100%; min-width: 0; }
+  .loc-fields > .btn,
+  .manual-fields > .btn { grid-column: 1 / -1; }
+
+  .checklist { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .task-item { padding: 14px 16px; }
+  .task-item label {
+    width: 44px;
+    height: 44px;
+    margin: -10px 0 -10px -10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+  .task-box { width: 24px; height: 24px; margin: 0; }
+
+  .titleblock { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tb-cell { padding: 16px; }
+  .crop-tools { width: 100%; align-items: stretch; }
+  .field-search,
+  .field-search input { width: 100%; }
+  .chip { min-height: 44px; }
+  .crop-grid { grid-template-columns: minmax(0, 1fr); }
+  .section-offline { gap: 24px; }
+  .chat { padding: 18px; }
+  .chat-input .btn { min-height: 48px; padding-inline: 18px; }
+  .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+}
+
+@media (max-width: 420px) {
+  .nav-inner { padding-inline: 12px; }
+  .nav-actions { gap: 6px; }
+  .nav-actions [data-github-link] { display: none; }
+  .hero { padding-inline: 16px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.4rem); }
+  .hero-cta .btn { width: 100%; min-height: 48px; }
+  .plan-card-head { justify-content: space-between; }
+  .plan-row { gap: 8px; }
+  .plan-row-label { max-width: 56%; font-size: 0.66rem; }
+  .plan-row-value { font-size: 0.92rem; }
+  .titleblock { grid-template-columns: minmax(0, 1fr); }
+  .tb-cell,
+  .tb-cell:nth-child(2),
+  .tb-cell:nth-child(4) { border-right: 0; }
+  .tb-cell:last-child { border-bottom: 0; }
+  .footer-inner { padding: 36px 18px; }
+  .footer-cols { grid-template-columns: minmax(0, 1fr); }
+  .section { padding-inline: 16px; }
+}
+
+@media (max-width: 360px) {
+  .net-pill { display: none; }
+  .nav-inner { padding-inline: 10px; }
+  .nav-actions { gap: 4px; }
 }
