@@ -191,14 +191,27 @@
               <input id="crop-search" type="search" placeholder="Search crops…" data-crop-search />
             </div>
             <div class="chips" data-crop-chips>
-              <button class="chip is-active" type="button" data-cat="all">All</button>
-              <button class="chip" type="button" data-cat="veg">Vegetables</button>
-              <button class="chip" type="button" data-cat="herb">Herbs</button>
-              <button class="chip" type="button" data-cat="flower">Flowers</button>
+              <button class="chip is-active" type="button" data-cat="all" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-cat="veg" aria-pressed="false">Vegetables</button>
+              <button class="chip" type="button" data-cat="herb" aria-pressed="false">Herbs</button>
+              <button class="chip" type="button" data-cat="flower" aria-pressed="false">Flowers</button>
             </div>
           </div>
         </div>
+        <h3 class="sr-only crop-page-heading" data-crop-page-heading tabindex="-1">Crop notes</h3>
         <div class="crop-grid" data-crop-grid></div>
+        <div class="crop-pager" data-crop-pager>
+          <p class="crop-result-count" data-crop-count aria-live="polite"></p>
+          <nav class="crop-pagination" data-crop-pagination aria-label="Crop results pages">
+            <button class="btn btn-secondary crop-page-btn" type="button" data-crop-prev aria-label="Previous crop page">
+              <i class="ph ph-arrow-left" aria-hidden="true"></i><span>Previous</span>
+            </button>
+            <span class="crop-page-label" data-crop-page-label aria-live="polite"></span>
+            <button class="btn btn-secondary crop-page-btn" type="button" data-crop-next aria-label="Next crop page">
+              <span>Next</span><i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </button>
+          </nav>
+        </div>
       </section>
 
       <section class="section section-offline" id="offline">

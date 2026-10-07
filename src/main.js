@@ -305,10 +305,16 @@ function renderBanner() {
 }
 
 const CROPS = allPlants()
-let cropFilter = { cat: 'all', q: '' }
+const cropPageSize = () => (window.matchMedia('(max-width: 760px)').matches ? 4 : 8)
+let cropFilter = { cat: 'all', q: '', page: 1 }
 
-function renderCrops({ animate = true } = {}) {
+function renderCrops({ animate = true, focusPage = false } = {}) {
   const grid = $('[data-crop-grid]')
+  const pager = $('[data-crop-pager]')
+  const count = $('[data-crop-count]')
+  const pageLabel = $('[data-crop-page-label]')
+  const previous = $('[data-crop-prev]')
+  const next = $('[data-crop-next]')
   grid.classList.toggle('no-anim', !animate)
   const q = cropFilter.q.trim().toLowerCase()
   const list = CROPS.filter(
@@ -318,9 +324,26 @@ function renderCrops({ animate = true } = {}) {
   )
   if (!list.length) {
     grid.innerHTML = `<div class="empty-state"><i class="ph ph-magnifying-glass"></i><h3>No crops match</h3><p>Clear the search or pick another category.</p></div>`
+    count.textContent = 'No crops match your search.'
+    pageLabel.textContent = ''
+    previous.disabled = true
+    next.disabled = true
+    $('[data-crop-pagination]').hidden = true
+    if (focusPage) $('[data-crop-page-heading]').focus({ preventScroll: true })
     return
   }
-  grid.innerHTML = list
+  const pageSize = cropPageSize()
+  const pageCount = Math.ceil(list.length / pageSize)
+  cropFilter.page = Math.min(cropFilter.page, pageCount)
+  const start = (cropFilter.page - 1) * pageSize
+  const visible = list.slice(start, start + pageSize)
+  count.textContent = `Showing ${start + 1}–${start + visible.length} of ${list.length} crops`
+  pageLabel.textContent = `Page ${cropFilter.page} of ${pageCount}`
+  previous.disabled = cropFilter.page === 1
+  next.disabled = cropFilter.page === pageCount
+  $('[data-crop-pagination]').hidden = pageCount < 2
+  pager.hidden = false
+  grid.innerHTML = visible
     .map((p, i) => {
       const catLabel = p.cat === 'veg' ? 'vegetable' : p.cat === 'herb' ? 'herb' : 'flower'
       const chips = [
@@ -336,6 +359,11 @@ function renderCrops({ animate = true } = {}) {
       </article>`
     })
     .join('')
+  if (focusPage) {
+    const heading = $('[data-crop-page-heading]')
+    heading.textContent = `Crop notes, page ${cropFilter.page}`
+    heading.focus()
+  }
 }
 
 function renderAll() {
@@ -462,14 +490,34 @@ function initCrops() {
   search.placeholder = `Search ${CROPS.length} crops…`
   search.addEventListener('input', () => {
     cropFilter.q = search.value
+    cropFilter.page = 1
     renderCrops({ animate: false })
   })
   $('[data-crop-chips]').addEventListener('click', (e) => {
     const chip = e.target.closest('.chip')
     if (!chip) return
     cropFilter.cat = chip.dataset.cat
-    $$('.chip').forEach((c) => c.classList.toggle('is-active', c === chip))
+    cropFilter.page = 1
+    $$('.chip').forEach((c) => {
+      const active = c === chip
+      c.classList.toggle('is-active', active)
+      c.setAttribute('aria-pressed', String(active))
+    })
     renderCrops()
+  })
+
+  $('[data-crop-prev]').addEventListener('click', () => {
+    if (cropFilter.page <= 1) return
+    cropFilter.page -= 1
+    renderCrops({ focusPage: true })
+  })
+  $('[data-crop-next]').addEventListener('click', () => {
+    cropFilter.page += 1
+    renderCrops({ focusPage: true })
+  })
+  window.matchMedia('(max-width: 760px)').addEventListener('change', () => {
+    cropFilter.page = 1
+    renderCrops({ animate: false })
   })
 }
 

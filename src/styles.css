@@ -982,6 +982,51 @@ textarea,
   color: var(--ink-soft);
 }
 
+.crop-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.crop-result-count {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.crop-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crop-page-btn {
+  min-height: 44px;
+  padding: 9px 16px;
+}
+
+.crop-page-btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.crop-page-label {
+  min-width: 86px;
+  color: var(--ink-soft);
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.crop-page-heading:focus {
+  outline: none;
+}
+
 .section-offline {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1567,6 +1612,8 @@ textarea,
   .footer-inner { padding: 36px 18px; }
   .footer-cols { grid-template-columns: minmax(0, 1fr); }
   .section { padding-inline: 16px; }
+  .crop-pager { align-items: stretch; flex-direction: column; gap: 10px; }
+  .crop-pagination { justify-content: space-between; }
 }
 
 @media (max-width: 360px) {
